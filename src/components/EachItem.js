@@ -19,7 +19,9 @@ const EachItem = (props) => {
       <h1> Ranking : {rating}</h1>
       <button onClick={() => handleDelete(id)}>Delete</button>
       <button onClick={() => handleEdit(id)}>Edit</button>
-      {toggle && <Form name={name} ranking={rating} id={id} />}
+      {toggle && (
+        <Form name={name} ranking={rating} id={id} handleEdit={handleEdit} />
+      )}
     </div>
   );
 };

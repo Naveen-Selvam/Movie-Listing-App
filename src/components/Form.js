@@ -27,6 +27,7 @@ const Form = (props) => {
     };
     if (props.id) {
       dispatch(startEditData(data));
+      props.handleEdit();
     } else {
       dispatch(startAddData(data));
       setMovieName("");
